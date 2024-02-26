@@ -137,4 +137,121 @@ git push origin main
 
 
 
+# def selection_sort(arr):
+#     length=len(arr)
+#     for i in range(length-1):
+#         min_index=i
+#         for j in range (i+1,length):
+#             if arr[j]<arr[min_index]:
+#                  min_index=j
+#         arr[i],arr[min_index]=arr[min_index],arr[i]
+#     return arr
+# arr=[8,1,6,4,2]
+# print("after sorting",selection_sort(arr))
+# selection_sort(arr)
+
+
+# def bubble_sort(arr):
+#     length=len(arr)
+#     for i in range(0,length-1):
+#         for j in range(length-1):
+#             if(arr[j]>arr[j+1]):
+#                 temp=arr[j]
+#                 arr[j]=arr[j+1]
+#                 arr[j+1]=temp
+#     return arr
+# arr=[5,1, 6 ,2 ,7]
+# print("after sorting",bubble_sort(arr))
+    
+# def sequential_search(arr,n):
+#     length=len(arr)
+#     found=0
+#     for i in range(0,length-1):
+#         if arr[i]==n:
+#             print("The element is found at",i)
+#             found=1
+#     if found!=1:
+#             print("Element not found")
+# arr=[5,1,7,2,6,3]
+# n=int(input("Enter the number to search:"))
+# sequential_search(arr,n)      
+                
+                
+# number = int(input("Enter the integer number: "))  
+  
+# revs_number = 0  
+  
+# while (number > 0):  
+#     remainder = number % 10  
+#     revs_number = (revs_number * 10) + remainder  
+#     number = number // 10  
+  
+# print("The reverse number is :",revs_number)
+
+
+
+# def insertion_sort(arr):
+#     for i in range(1, len(arr)):
+#         key = arr[i]
+#         j = i - 1
+#         while j >= 0 and key < arr[j]:
+#             arr[j + 1] = arr[j]
+#             j -= 1
+#         arr[j + 1] = key
+
+
+# arr = [12, 11, 13, 5, 6]
+# insertion_sort(arr)
+# print("Sorted array is:", arr)
+
+def is_even(num):
+    return num % 2 == 0
+
+def is_odd(num):
+    return num % 2 != 0
+
+# Example Usage:
+num = 17
+if is_even(num):
+    print(num, "is even")
+else:
+    print(num, "is odd")
+
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+# Example Usage:
+arr = [2, 3, 4, 10, 40]
+x = 10
+result = binary_search(arr, x)
+if result != -1:
+    print("Element is present at index", result)
+else:
+    print("Element is not present in array")
+
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Example Usage:
+num = 11
+if is_prime(num):
+    print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
 
